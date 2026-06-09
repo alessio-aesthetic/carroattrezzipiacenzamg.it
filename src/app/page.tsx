@@ -7,18 +7,12 @@ const whatsappUrl = `https://wa.me/${site.whatsapp}`
 
 function Brand() {
   return (
-    <Link href="/" className="flex items-center gap-3">
-      <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#EA580C] text-sm font-black text-white shadow-lg shadow-orange-900/20">
-        MG
-      </span>
-      <span className="leading-tight">
-        <span className="block font-display text-lg font-bold text-slate-950">
-          Carroattrezzi Piacenza
-        </span>
-        <span className="block text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
-          soccorso stradale
-        </span>
-      </span>
+    <Link href="/" className="flex min-w-0 items-center">
+      <img
+        src="/images/logo-piacenza.png"
+        alt="Carroattrezzi Piacenza"
+        className="h-14 w-auto max-w-[210px] object-contain sm:h-16 sm:max-w-[280px]"
+      />
     </Link>
   )
 }
