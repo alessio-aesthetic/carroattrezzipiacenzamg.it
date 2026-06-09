@@ -9,9 +9,9 @@ function Brand() {
   return (
     <Link href="/" className="flex min-w-0 items-center">
       <img
-        src="/images/logo-piacenza.png"
+        src="/images/logo-piacenza-cropped.png"
         alt="Carroattrezzi Piacenza"
-        className="h-14 w-auto max-w-[210px] object-contain sm:h-16 sm:max-w-[280px]"
+        className="h-16 w-auto max-w-[290px] object-contain sm:h-20 sm:max-w-[420px] lg:h-24"
       />
     </Link>
   )
@@ -78,7 +78,7 @@ function Hero() {
   return (
     <section className="relative overflow-hidden bg-[#FFF7ED]">
       <div className="absolute inset-y-0 right-0 hidden w-1/2 bg-white lg:block" />
-      <Container className="relative grid gap-10 pb-16 pt-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-stretch lg:pb-24 lg:pt-20">
+      <Container className="relative grid gap-8 pb-16 pt-12 lg:grid-cols-[0.62fr_1.38fr] lg:items-stretch lg:pb-24 lg:pt-20">
         <div className="flex flex-col justify-between rounded-[2rem] bg-white p-8 shadow-xl shadow-orange-950/10 ring-1 ring-orange-100 lg:p-10">
           <div>
             <p className="inline-flex rounded-full bg-orange-50 px-4 py-2 text-sm font-semibold text-[#C2410C] ring-1 ring-orange-200">
@@ -111,12 +111,12 @@ function Hero() {
           </div>
         </div>
 
-        <div className="relative min-h-[520px] overflow-hidden rounded-[2rem] bg-gradient-to-br from-slate-900 via-slate-800 to-orange-900 p-6 shadow-2xl shadow-slate-950/20">
+        <div className="relative min-h-[660px] overflow-hidden rounded-[2rem] bg-gradient-to-br from-slate-900 via-slate-800 to-orange-900 p-6 shadow-2xl shadow-slate-950/20">
           <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-orange-500/25 to-transparent" />
           <img
             src="/images/hero-piacenza-technician.png"
             alt="Tecnico del carroattrezzi a Piacenza con mezzo di soccorso"
-            className="absolute bottom-0 right-[-6%] z-10 w-[112%] max-w-none object-contain lg:right-[-8%]"
+            className="absolute bottom-0 right-[-1%] z-10 w-[98%] max-w-none object-contain lg:right-0"
           />
           <div className="relative z-20 max-w-xs rounded-3xl border border-white/15 bg-white/12 p-5 text-white backdrop-blur">
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-orange-200">
@@ -371,7 +371,12 @@ function WhyAndPricing() {
               recupero e destinazione. Prima di partire raccogliamo i dettagli
               utili per darti un’indicazione sensata e ridurre le sorprese.
             </p>
-            <PhoneLink className="mt-7 bg-white text-[#C2410C] hover:bg-orange-50" />
+          <Link
+            href={`tel:${site.tel}`}
+            className="mt-7 inline-flex items-center justify-center rounded-full bg-slate-950 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-black/15 transition hover:bg-slate-800"
+          >
+            Chiama {site.phone}
+          </Link>
           </div>
         </div>
       </Container>
@@ -428,10 +433,15 @@ function FinalCta() {
           </p>
         </div>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row lg:mt-0">
-          <PhoneLink />
+          <Link
+            href={`tel:${site.tel}`}
+            className="inline-flex items-center justify-center rounded-full bg-[#EA580C] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-900/30 transition hover:bg-[#C2410C]"
+          >
+            Chiama {site.phone}
+          </Link>
           <Link
             href={whatsappUrl}
-            className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-orange-50"
+            className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-orange-50"
           >
             WhatsApp
           </Link>
