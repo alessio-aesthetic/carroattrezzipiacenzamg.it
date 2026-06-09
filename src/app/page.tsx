@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 import { Container } from '@/components/Container'
+import { ConsentBanner } from '@/components/ConsentBanner'
 import { faqs, services, site, zones } from '@/data/site'
 
 const whatsappUrl = `https://wa.me/${site.whatsapp}`
@@ -180,13 +181,13 @@ function Urgencies() {
     <section id="urgenze" className="bg-white py-24">
       <Container>
         <div className="grid gap-12 lg:grid-cols-[1fr_0.9fr] lg:items-center">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             {services.slice(0, 4).map((service, index) => (
               <Link
                 key={service.slug}
                 href={`/servizi/${service.slug}/`}
                 className={`group overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-50 shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-orange-950/10 ${
-                  index % 2 ? 'translate-y-8' : ''
+                  index % 2 ? 'md:translate-y-8' : ''
                 }`}
               >
                 <img
@@ -506,6 +507,17 @@ function Footer() {
   )
 }
 
+function StickyCall() {
+  return (
+    <Link
+      href={`tel:${site.tel}`}
+      className="fixed bottom-4 right-4 z-40 inline-flex items-center justify-center rounded-full bg-[#EA580C] px-4 py-3 text-xs font-bold text-white shadow-2xl shadow-orange-950/30 ring-1 ring-white/40 transition hover:bg-[#C2410C] sm:px-5 sm:text-sm"
+    >
+      Chiama
+    </Link>
+  )
+}
+
 function JsonLd() {
   const schema = [
     {
@@ -559,6 +571,8 @@ export default function Home() {
         <FinalCta />
       </main>
       <Footer />
+      <StickyCall />
+      <ConsentBanner />
     </>
   )
 }
