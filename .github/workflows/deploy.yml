@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Build static site
 
 on:
   push:
@@ -6,16 +6,14 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: gh-pages
+  cancel-in-progress: true
 
 jobs:
-  build:
+  build-and-publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -24,17 +22,15 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      - uses: actions/configure-pages@v5
       - run: npm run build
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: out
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Publish static export to gh-pages
+        run: |
+          cd out
+          touch .nojekyll
+          echo "carroattrezzipiacenzamg.it" > CNAME
+          git init
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Deploy static site"
+          git push --force "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:gh-pages
