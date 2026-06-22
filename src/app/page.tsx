@@ -4,8 +4,6 @@ import { Container } from '@/components/Container'
 import { ConsentBanner } from '@/components/ConsentBanner'
 import { faqs, services, site, zones } from '@/data/site'
 
-const whatsappUrl = `https://wa.me/${site.whatsapp}`
-
 function Brand() {
   return (
     <Link href="/" className="flex min-w-0 items-center">
@@ -35,17 +33,6 @@ function PhoneLink({
   )
 }
 
-function WhatsAppLink({ className = '' }: { className?: string }) {
-  return (
-    <Link
-      href={whatsappUrl}
-      className={`inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:border-[#EA580C] hover:text-[#EA580C] ${className}`}
-    >
-      WhatsApp
-    </Link>
-  )
-}
-
 function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur">
@@ -66,7 +53,6 @@ function Header() {
           </a>
         </nav>
         <div className="hidden items-center gap-3 lg:flex">
-          <WhatsAppLink className="py-2.5" />
           <PhoneLink className="py-2.5" />
         </div>
         <PhoneLink className="px-5 lg:hidden">Chiama</PhoneLink>
@@ -108,7 +94,6 @@ function Hero() {
           </div>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <PhoneLink />
-            <WhatsAppLink />
           </div>
         </div>
 
@@ -246,7 +231,7 @@ function Services() {
               informazioni chiare e un recupero eseguito con cura.
             </p>
           </SectionTitle>
-          <WhatsAppLink />
+          <PhoneLink />
         </div>
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
@@ -439,12 +424,6 @@ function FinalCta() {
             className="inline-flex items-center justify-center rounded-full bg-[#EA580C] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-900/30 transition hover:bg-[#C2410C]"
           >
             Chiama {site.phone}
-          </Link>
-          <Link
-            href={whatsappUrl}
-            className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-orange-50"
-          >
-            WhatsApp
           </Link>
         </div>
       </Container>

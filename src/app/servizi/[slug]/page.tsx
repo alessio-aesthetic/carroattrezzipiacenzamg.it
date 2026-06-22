@@ -75,12 +75,6 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                   >
                     Chiama {site.phone}
                   </Link>
-                  <Link
-                    href={`https://wa.me/${site.whatsapp}`}
-                    className="rounded-full bg-white px-6 py-3 text-center text-sm font-semibold text-slate-950"
-                  >
-                    WhatsApp
-                  </Link>
                 </div>
               </div>
             </div>
