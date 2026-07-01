@@ -2,10 +2,10 @@ export const site = {
   domain: 'carroattrezzipiacenzamg.it',
   name: 'Carroattrezzi Piacenza MG',
   city: 'Piacenza',
-  phone: '0523 192 0056',
-  tel: '+3905231920056',
+  phone: '0523 192 0069',
+  tel: '+3905231920069',
   email: 'assistenza@carroattrezzipiacenzamg.it',
-  address: 'Via Caorsana, 84 - 29122 Piacenza PC',
+  address: 'Via Toscana, 15 - 29122 Piacenza PC',
   title: 'Carroattrezzi a Piacenza 24H',
   description:
     'Carroattrezzi a Piacenza per soccorso stradale, traino auto, moto e furgoni. Intervento rapido, assistenza chiara e trasporto sicuro.',

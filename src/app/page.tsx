@@ -508,7 +508,7 @@ function JsonLd() {
       email: site.email,
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Via Caorsana, 84',
+        streetAddress: 'Via Toscana, 15',
         postalCode: '29122',
         addressLocality: site.city,
         addressRegion: 'PC',
