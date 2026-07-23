@@ -1,4 +1,4 @@
-import { type Metadata } from 'next'
+﻿import { type Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
@@ -29,11 +29,11 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
 
   return (
     <main className="bg-white">
-      <section className="bg-[#FFF7ED] py-16">
+      <section className="bg-[#FEF2F2] py-16">
         <Container>
           <div className="grid overflow-hidden rounded-[2rem] bg-white shadow-2xl shadow-orange-950/10 ring-1 ring-orange-100 lg:grid-cols-[0.95fr_1.05fr]">
             <div className="p-8 lg:p-12">
-              <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#EA580C]">
+              <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#DC2626]">
                 zona servita
               </p>
               <h1 className="mt-4 max-w-4xl font-display text-5xl font-bold tracking-tight text-slate-950">
@@ -41,7 +41,7 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
               </h1>
               <div className="mt-6 space-y-5 text-lg leading-8 text-slate-700">
                 <p>
-                  Il servizio di <strong>carroattrezzi a {zone.name}</strong> è
+                  Il servizio di <strong>carroattrezzi a {zone.name}</strong> Ã¨
                   pensato per chi ha un mezzo fermo e vuole una gestione
                   semplice: chiamata chiara, destinazione concordata e recupero
                   organizzato con attenzione.
@@ -51,10 +51,10 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
                   furgoni leggeri e trasporti verso officine o carrozzerie della
                   zona di Piacenza. Anche quando il veicolo si trova in un
                   parcheggio privato, in una strada secondaria o vicino a
-                  un’area produttiva, valutiamo gli accessi prima di muoverci.
+                  unâ€™area produttiva, valutiamo gli accessi prima di muoverci.
                 </p>
                 <p>
-                  A {zone.name} la rapidità conta, ma conta anche il modo in cui
+                  A {zone.name} la rapiditÃ  conta, ma conta anche il modo in cui
                   viene eseguito il servizio. Ti aiutiamo a comunicare le
                   informazioni giuste e a decidere dove portare il mezzo senza
                   pressioni inutili.
@@ -63,7 +63,7 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Link
                   href={`tel:${site.tel}`}
-                  className="rounded-full bg-[#EA580C] px-6 py-3 text-center text-sm font-semibold text-white"
+                  className="rounded-full bg-[#DC2626] px-6 py-3 text-center text-sm font-semibold text-white"
                 >
                   Chiama {site.phone}
                 </Link>
@@ -82,24 +82,24 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
         <Container>
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1fr]">
             <div>
-              <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#EA580C]">
+              <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#DC2626]">
                 come lavoriamo
               </p>
               <h2 className="mt-4 font-display text-4xl font-bold text-slate-950">
-                Recupero chiaro, anche fuori dal centro città.
+                Recupero chiaro, anche fuori dal centro cittÃ .
               </h2>
             </div>
             <div className="space-y-5 text-lg leading-8 text-slate-700">
               <p>
-                Se il mezzo è fermo in un punto poco visibile, vicino a una
+                Se il mezzo Ã¨ fermo in un punto poco visibile, vicino a una
                 curva, in una zona industriale o in una strada di campagna, la
-                posizione precisa è fondamentale. Ti guidiamo nella raccolta dei
+                posizione precisa Ã¨ fondamentale. Ti guidiamo nella raccolta dei
                 dati utili per evitare passaggi confusi.
               </p>
               <p>
                 Poi concordiamo la destinazione: officina, carrozzeria,
-                abitazione, deposito o altra sede. Questo rende l’intervento più
-                ordinato e ti permette di sapere già dove finirà il veicolo.
+                abitazione, deposito o altra sede. Questo rende lâ€™intervento piÃ¹
+                ordinato e ti permette di sapere giÃ  dove finirÃ  il veicolo.
               </p>
             </div>
           </div>
@@ -112,7 +112,7 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
               <Link
                 key={service.slug}
                 href={`/servizi/${service.slug}/`}
-                className="rounded-2xl border border-slate-200 bg-slate-50 px-5 py-4 font-semibold text-slate-800 transition hover:border-[#EA580C]/40 hover:bg-white hover:text-[#EA580C]"
+                className="rounded-2xl border border-slate-200 bg-slate-50 px-5 py-4 font-semibold text-slate-800 transition hover:border-[#DC2626]/40 hover:bg-white hover:text-[#DC2626]"
               >
                 {service.title}
               </Link>
@@ -123,3 +123,6 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
     </main>
   )
 }
+
+
+

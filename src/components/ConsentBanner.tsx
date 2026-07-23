@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useEffect, useState } from 'react'
 
@@ -16,7 +16,7 @@ export function ConsentBanner() {
       <p className="text-sm font-semibold">Privacy e cookie</p>
       <p className="mt-2 text-xs leading-5 text-slate-600">
         Usiamo solo strumenti tecnici necessari al funzionamento del sito e al
-        miglioramento dell’esperienza. Puoi continuare accettando questo avviso.
+        miglioramento dellâ€™esperienza. Puoi continuare accettando questo avviso.
       </p>
       <button
         type="button"
@@ -24,10 +24,13 @@ export function ConsentBanner() {
           localStorage.setItem('cookie-consent', 'accepted')
           setVisible(false)
         }}
-        className="mt-3 rounded-full bg-[#EA580C] px-4 py-2 text-xs font-bold text-white shadow-sm transition hover:bg-[#C2410C]"
+        className="mt-3 rounded-full bg-[#DC2626] px-4 py-2 text-xs font-bold text-white shadow-sm transition hover:bg-[#991B1B]"
       >
         Accetto
       </button>
     </div>
   )
 }
+
+
+
