@@ -1,4 +1,4 @@
-﻿export const site = {
+export const site = {
     "domain":  "carroattrezzipiacenzamg.it",
     "template":  "transmit",
     "description":  "Carroattrezzi a Piacenza e soccorso stradale a Piacenza: traino, recupero auto, assistenza moto e interventi rapidi in città e provincia.",
