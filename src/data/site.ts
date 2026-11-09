@@ -5,7 +5,6 @@ export const site = {
     "tel":  "+3905231920069",
     "city":  "Piacenza",
     "name":  "Carroattrezzi Piacenza",
-    "address":  "Via Toscana, 15 - 29122 Piacenza PC",
     "title":  "Carroattrezzi a Piacenza 24H | Soccorso stradale",
     "phone":  "0523 192 0069",
     "email":  "assistenza@carroattrezzipiacenzamg.it"
